@@ -111,6 +111,9 @@ local.properties
 # *.iml
 # *.ipr
 
+# JetBrains IntelliJ
+.idea
+
 # CMake
 cmake-build-*/
 
