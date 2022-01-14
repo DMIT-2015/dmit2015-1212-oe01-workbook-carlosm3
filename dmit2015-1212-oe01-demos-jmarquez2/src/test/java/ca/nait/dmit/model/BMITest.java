@@ -7,16 +7,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class BMITest {
 
     @Test
-    void bmiShouldBeUnderweight() {
+    void bmi() {
         BMI bmi1 = new BMI();
-        bmi1.setWeight(100);
-        bmi1.setHeight(66);
+        bmi1.setWeight(170);
+        bmi1.setHeight(71);
         // Delta: results can be off by "delta"
-        assertEquals(16.1, bmi1.bmi(), 0.05);
-        assertEquals("underweight", bmi1.bmiCategory());
+        assertEquals(23.7, bmi1.bmi(), 0.05);
     }
 
     @Test
     void bmiCategory() {
+        BMI bmi1 = new BMI();
+        bmi1.setWeight(170);
+        bmi1.setHeight(71);
+        assertEquals("normal", bmi1.bmiCategory());
     }
 }
