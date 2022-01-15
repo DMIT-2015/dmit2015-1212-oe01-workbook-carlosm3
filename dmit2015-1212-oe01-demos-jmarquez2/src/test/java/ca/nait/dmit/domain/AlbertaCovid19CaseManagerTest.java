@@ -20,4 +20,10 @@ class AlbertaCovid19CaseManagerTest {
     void getAlbertaCovid19CaseList() {
         assertEquals(436495, caseManager.getAlbertaCovid19CaseList().size());
     }
+
+    @Test
+    void distinctAhsZone() {
+        caseManager.findDistinctAhsZone().forEach(System.out::println);
+        assertEquals(7,caseManager.findDistinctAhsZone().size());
+    }
 }
